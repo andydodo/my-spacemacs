@@ -49,3 +49,4 @@
         (server-start)))))
 ;; 2020.6.09 add by andy
 (add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "C-]")'godef-jump-other-window)))
+(add-hook 'before-save-hook 'gofmt-before-save)
