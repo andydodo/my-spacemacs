@@ -48,5 +48,7 @@
         (message "Starting a server...")
         (server-start)))))
 ;; 2020.6.09 add by andy
-(add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "C-]")'godef-jump-other-window)))
+(add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "C-]")'godef-jump)))
+(add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "M-[")'pop-tag-mark)))
 (add-hook 'before-save-hook 'gofmt-before-save)
+(define-coding-system-alias 'UTF-8 'utf-8)
